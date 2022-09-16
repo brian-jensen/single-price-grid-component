@@ -7,15 +7,15 @@
   --color-white-75: hsla(0, 0%, 100%, 0.75);
   --color-white-50: hsla(0, 0%, 100%, 0.5);
   --color-text: hsl(218.3, 21.7%, 67.5%);
-  --text-h1: 700 20px/23px "Karla", sans-serif;
-  --text-h2: 700 18px/21px "Karla", sans-serif;
-  --text-callout: 700 15px/20px "Karla", sans-serif;
-  --text-p: 400 14px/26px "Karla", sans-serif;
-  --text-price: 700 32px/37px "Karla", sans-serif;
-  --text-duration: 400 14px/26px "Karla", sans-serif;
-  --text-price-p: 400 16px/26px "Karla", sans-serif;
-  --text-button: 700 16px/19px "Karla", sans-serif;
-  --text-li: 400 14px/20px "Karla", sans-serif;
+  --text-h1: 700 1.25rem/1.4375rem "Karla", sans-serif;
+  --text-h2: 700 1.125rem/1.3125rem "Karla", sans-serif;
+  --text-callout: 700 0.9375rem/1.25rem "Karla", sans-serif;
+  --text-p: 400 0.875rem/1.625rem "Karla", sans-serif;
+  --text-price: 700 2rem/2.3125rem "Karla", sans-serif;
+  --text-duration: 400 0.875rem/1.625rem "Karla", sans-serif;
+  --text-price-p: 400 1rem/1.625rem "Karla", sans-serif;
+  --text-button: 700 1rem/1.1875rem "Karla", sans-serif;
+  --text-li: 400 0.875rem/1.25rem "Karla", sans-serif;
   --shadow-card: 0rem 0.9375rem 1.875rem hsla(211.6, 100%, 33.5%, 0.1);
   --shadow-button: 0rem 0.625rem 0.625rem hsla(0, 0%, 0%, 0.1);
 }
@@ -157,4 +157,52 @@ li {
   font: var(--text-li);
   color: var(--color-white-75);
   letter-spacing: -0.0109rem;
+}
+
+@media (min-width: 1440px) {
+
+  .card {
+    grid-template-columns: 19.8438rem 19.8438rem;
+    grid-template-rows: 13.5rem 16.1875rem;
+    grid-template-areas:
+      "top top"
+      "mid btm";
+  }
+
+  .card>section {
+    padding: 2.5rem;
+  }
+
+  .card-top {
+    grid-area: top;
+  }
+
+  .card-mid {
+    grid-area: mid;
+    border-bottom-left-radius: 5px;
+  }
+
+  .card-btm {
+    grid-area: btm;
+    border-bottom-left-radius: 0;
+  }
+
+  .card h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.0187rem;
+  }
+
+  .card .callout {
+    margin-bottom: 11px;
+    font: var(--text-h2);
+    letter-spacing: -0.0141rem;
+  }
+
+  .card-top-text {
+    margin-bottom: 0;
+    font: var(--text-price-p);
+    letter-spacing: -0.0125rem;
+  }
+
 }
